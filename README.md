@@ -6,7 +6,9 @@ This repo is a few handpicked API lessons you can do to get familiar with some s
 
 ## Get Started
 - [Download Postman](https://www.postman.com/)
-- Start a new project using the [Webpack Template](https://github.com/nss-evening-cohort-14/webpack-template)
+- Start a new project using one of the following templates:
+  - If we have started React, use this template: [React Template](https://github.com/nss-evening-cohort-14/react-template) 
+  - If we are still working on JS use this template: [Webpack Template](https://github.com/nss-evening-cohort-14/webpack-template)
 - Go ahead and create an account and an API Key on the Open Weather API because it takes a couple of hours for the API Key to kick in and doing so will mean the key will be ready when you are ready.
 
 ## Quick Projects
