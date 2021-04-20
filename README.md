@@ -15,8 +15,8 @@ This repo is a few handpicked API lessons you can do to get familiar with some s
 Start with the first project and work down the list. DO NOT SKIP!
 
 1. [Joke Generator](./joke-generator.md)
-1. [Lyrics Generator](./lyrics.md)
-1. [Open Weather API](./weather.md)
-1. [Lord of the Rings](./lotr.md)
-1. [The Movie Database](./moviedb-api.md)
-1. [Build Your Own](./byo.md)
+2. [Open Weather API](./weather.md)
+3. [Lyrics Generator](./lyrics.md)
+4. [Lord of the Rings](./lotr.md)
+5. [The Movie Database](./moviedb-api.md)
+6. [Build Your Own](./byo.md)
