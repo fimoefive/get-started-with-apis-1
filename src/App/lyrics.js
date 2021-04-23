@@ -3,12 +3,12 @@ import getLyrics from '../helpers/lyricsData';
 import './App.scss';
 
 function Lyrics() {
-  const [allArtists, setAllArtists] = useState();
+  const [artists, setArtists] = useState();
   const [singleSong, setSingleSong] = useState([]);
-  const [showArtist, setShowArtist] = useState(true);
-  const [showLyric, setShowLyric] = useState(true);
+  const [showArtist, setShowArtist] = useState(false);
+  const [showLyric, setShowLyric] = useState(false);
 
-  // console.warn(allArtists);
+  // console.warn(artists);
   // console.warn(getLyrics('ColdPlay', 'Adventure of a Lifetime'));
 
   const artistInput = () => {
@@ -17,11 +17,17 @@ function Lyrics() {
   };
 
   const handleLyrics = () => {
-    setShowLyric(true);
+    if (showLyric === true) {
+      setShowLyric(false);
+    } else {
+      setShowLyric(true);
+      getLyrics(artists, singleSong)
+        .then((lyrics) => console.warn(lyrics));
+    }
   };
 
   const handleNewSong = () => {
-    setSingleSong(allArtists);
+    setSingleSong(artists);
     setShowLyric(false);
   };
 
@@ -29,7 +35,7 @@ function Lyrics() {
     getLyrics('ColdPlay', 'Adventure of a Lifetime')
       .then((lyrics) => {
         console.warn(getLyrics('ColdPlay', 'Adventure of a Lifetime'));
-        setAllArtists(lyrics);
+        setArtists(lyrics);
         setSingleSong(lyrics);
         setShowArtist(true);
         setShowLyric(true);
@@ -40,14 +46,19 @@ function Lyrics() {
     <>
       <div className='Lyrics'>
         <h1>LYRICS</h1>
-        <h2 className="song">{showArtist && singleSong.artist}</h2>
+        <h2 className="song">{showArtist && artists.artist}</h2>
         <h2 className="song">{showLyric && singleSong.title}</h2>
-
-        <input onKeyPress={artistInput} className="input" placeholder="Get Artist"></input>
-        <input onKeyPress={artistInput} className="input" placeholder="Get Song"></input>
-        <div></div>
-        {showArtist && !showLyric ? <button color="info" onClick={handleLyrics} className="button">Get Lyrics</button> : ''}
-        {showArtist && showLyric ? <button color="info" onClick={handleNewSong} className="button">Another Song</button> : ''}
+        <div className="form">
+          <form>
+            <label>Artist: </label>
+            <input onChange={artistInput} className="input" placeholder="Get Artist"></input>
+            <br></br>
+            <label>Song Title: </label>
+            <input onChange={artistInput} className="input" placeholder="Get Song"></input>
+            {showArtist && !showLyric ? <button color="info" onClick={handleLyrics} className="button">Get Lyrics</button> : ''}
+            {showArtist && showLyric ? <button color="info" onClick={handleNewSong} className="button">Another Song</button> : ''}
+          </form>
+        </div>
       </div>
     </>
   );
