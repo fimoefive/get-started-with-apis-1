@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 // import App from './App';
 import Jokes from './App/jokes';
+import Lyrics from './App/lyrics';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -11,6 +13,7 @@ ReactDOM.render(
     <h1>REACT APIS</h1>
     {/* <App /> */}
     <Jokes />
+    <Lyrics />
   </React.StrictMode>,
   document.getElementById('root')
 );
