@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import getWeather from '../helpers/weatherData';
+import '../styles/index.scss';
 
 function Weather() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [data, setData] = useState(null);
+
   return (
     <>
       <div className='Weather'>
+        <div className="weatherContainer">
+          <h3>{data.name}</h3>
+          <p className="center">{data.weather[0].description}</p>
+        </div>
         <div className="form">
           <form onSubmit={(e) => {
             e.preventDefault();

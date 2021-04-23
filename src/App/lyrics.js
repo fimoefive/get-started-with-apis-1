@@ -27,7 +27,8 @@ function Lyrics() {
   };
 
   const handleNewSong = () => {
-    setSingleSong(artists);
+    setArtists(artists);
+    setSingleSong(singleSong);
     setShowLyric(false);
   };
 
@@ -51,11 +52,12 @@ function Lyrics() {
         <div className="form">
           <form>
             <label>Artist: </label>
-            <input onChange={artistInput} className="input" placeholder="Get Artist"></input>
+            <input type="text" id="artistName" onChange={artistInput} className="input" placeholder="Artist Name"></input>
             <br></br>
             <label>Song Title: </label>
-            <input onChange={artistInput} className="input" placeholder="Get Song"></input>
-            {showArtist && !showLyric ? <button color="info" onClick={handleLyrics} className="button">Get Lyrics</button> : ''}
+            <input type="text" id="songTitle" onChange={artistInput} className="input" placeholder="Song"></input>
+            <br></br>
+            {showArtist && showLyric ? <button color="info" onClick={handleLyrics} className="button">Get Lyrics</button> : ''}
             {showArtist && showLyric ? <button color="info" onClick={handleNewSong} className="button">Another Song</button> : ''}
           </form>
         </div>
