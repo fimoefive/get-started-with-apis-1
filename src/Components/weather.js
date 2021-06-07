@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+// import { Button } from 'reactstrap';
 import getWeather from '../helpers/weatherData';
 import '../styles/index.scss';
 
 function Weather() {
   const [city, setCity] = useState('');
   // const [state, setState] = useState('');
-  const [data, setData] = useState(([]));
+  const [data, setData] = useState(null);
   // console.warn(getWeather());
 
   async function getWeatherForecast() {
@@ -27,7 +28,8 @@ function Weather() {
             getWeatherForecast();
           }}>
             <h3>Weather Form</h3>
-            <input type="text" placeholder="City"
+            <input type="text"
+              placeholder="City"
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />

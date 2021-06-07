@@ -1,7 +1,26 @@
-// import React, { useState, useEffect } from 'react';
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import NavBar from '../Components/NavBar';
+import Routes from '../helpers/Routes';
+// import Jokes from '../Components/jokes';
+// import Weather from '../Components/weather';
+// import Lyrics from '../Components/lyrics';
 import './App.scss';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
+function App() {
+  return (
+    <div className='App'>
+      <h1>REACT API</h1>
+      <Router>
+        <NavBar />
+        <Routes />
+      </Router>
+      {/* <Jokes /> */}
+      {/* <Weather /> */}
+      {/* <Lyrics /> */}
+    </div>
+  );
+}
 
 // function App() {
 //   return (
@@ -22,13 +41,5 @@ import './App.scss';
 //     </div>
 //   );
 // }
-
-function App() {
-  return (
-    <div className='App'>
-      <h1>REACT API</h1>
-    </div >
-  );
-}
 
 export default App;

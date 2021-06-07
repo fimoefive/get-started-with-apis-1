@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getLyrics from '../helpers/lyricsData';
-import './App.scss';
+import '../styles/index.scss';
 
 function Lyrics() {
   const [artists, setArtists] = useState();

@@ -1,21 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+
 import './styles/index.scss';
-// import App from './App';
-import Jokes from './App/jokes';
-import Weather from './App/weather';
-import Lyrics from './App/lyrics';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>REACT API</h1>
-    {/* <App /> */}
-    <Jokes />
-    <Weather />
-    <Lyrics />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

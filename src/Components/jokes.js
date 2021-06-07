@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getJokes from '../helpers/jokesData';
-import './App.scss';
+import '../styles/index.scss';
 
 function Jokes() {
   const [allJokes, setAllJokes] = useState();
