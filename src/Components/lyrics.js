@@ -10,9 +10,6 @@ function Lyrics() {
   const [showLyric, setShowLyric] = useState(false);
   const [showArtist, setShowArtist] = useState({});
 
-  // console.warn(artist);
-  // console.warn(getLyrics('ColdPlay', 'Adventure of a Lifetime'));
-
   // const artistInput = (e) => {
   //   setShowArtist(e.target.value);
   //   setShowLyric(e.target.value);
