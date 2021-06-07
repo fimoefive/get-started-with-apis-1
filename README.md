@@ -1,3 +1,11 @@
+## LINKS
+
+### [Netlify]()
+
+### [LOOM]()
+
+### REACT API Screenshots
+
 # Get Started with APIs
 
 When you are new to development, often you will hear other devs talk about APIs and you may be wondering what they are and may even be a little intimidated.

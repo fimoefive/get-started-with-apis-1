@@ -7,6 +7,8 @@
 .vscode/
 package-lock.json
 dist/
+build/
+.env
 .firebase/
 
 # testing

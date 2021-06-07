@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-// const dbUrl = 'https://official-joke-api.appspot.com/random_joke';
-const baseUrl = 'https://official-joke-api.appspot.com/random_ten';
+const baseUrl = 'https://official-joke-api.appspot.com/jokes/ten';
 
 const getJokes = () => new Promise((resolve, reject) => {
   axios.get(baseUrl)
