@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import Home from '../Components/Home';
 import Jokes from '../Components/jokes';
+import Lyrics from '../Components/lyrics';
 // import Weather from '../Components/weather';
-// import Lyrics from '../Components/lyrics';
 
-function Routes({ allJokes, setAllJokes }) {
+function Routes({
+  allJokes, setAllJokes,
+  artists, setArtists,
+  singleSong, setSingleSong
+}) {
   return (
     <>
       <div>
@@ -19,12 +23,14 @@ function Routes({ allJokes, setAllJokes }) {
             />}
           />
 
-          {/* <Route
+          <Route
             path='/lyrics'
-            component={() => <AddPlayer />}
+            component={() => <Lyrics
+              artists={artists} setArtists={setArtists} singleSong={singleSong} setSingleSong={setSingleSong}
+            />}
           />
 
-          <Route
+          {/* <Route
             path='/weather'
             component={() => <AddPlayer />}
           /> */}
@@ -38,7 +44,11 @@ function Routes({ allJokes, setAllJokes }) {
 
 Routes.propTypes = {
   allJokes: PropTypes.array,
-  setAllJokes: PropTypes.func
+  setAllJokes: PropTypes.func,
+  artists: PropTypes.array,
+  setArtists: PropTypes.func,
+  singleSong: PropTypes.array,
+  setSingleSong: PropTypes.func
 };
 
 export default Routes;
