@@ -5,8 +5,9 @@ import '../styles/index.scss';
 function Lyrics() {
   const [artists, setArtists] = useState();
   const [singleSong, setSingleSong] = useState([]);
-  const [showArtist, setShowArtist] = useState(false);
   const [showLyric, setShowLyric] = useState(false);
+  // const [songLyrics, setSongLyrics] = useState({});
+  const [showArtist, setShowArtist] = useState(false);
 
   // console.warn(artists);
   // console.warn(getLyrics('ColdPlay', 'Adventure of a Lifetime'));

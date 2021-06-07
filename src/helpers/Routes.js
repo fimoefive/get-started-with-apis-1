@@ -9,7 +9,9 @@ import Lyrics from '../Components/lyrics';
 function Routes({
   allJokes, setAllJokes,
   artists, setArtists,
-  singleSong, setSingleSong
+  singleSong, setSingleSong,
+  showLyric, setShowLyric,
+  showArtist, setShowArtist
 }) {
   return (
     <>
@@ -27,12 +29,14 @@ function Routes({
             path='/lyrics'
             component={() => <Lyrics
               artists={artists} setArtists={setArtists} singleSong={singleSong} setSingleSong={setSingleSong}
+              showLyric={showLyric} setShowLyric={setShowLyric}
+              showArtist={showArtist} setShowArtist={setShowArtist}
             />}
           />
 
           {/* <Route
             path='/weather'
-            component={() => <AddPlayer />}
+            component={() => <Weather />}
           /> */}
 
           <Route path='*' component={Home} />
@@ -48,7 +52,11 @@ Routes.propTypes = {
   artists: PropTypes.array,
   setArtists: PropTypes.func,
   singleSong: PropTypes.array,
-  setSingleSong: PropTypes.func
+  setSingleSong: PropTypes.func,
+  showLyric: PropTypes.array,
+  setShowLyric: PropTypes.func,
+  showArtist: PropTypes.array,
+  setShowArtist: PropTypes.func
 };
 
 export default Routes;
