@@ -8,8 +8,8 @@ import Lyrics from '../Components/lyrics';
 
 function Routes({
   allJokes, setAllJokes,
-  artists, setArtists,
-  singleSong, setSingleSong,
+  artist, setArtists,
+  song, setSong,
   showLyric, setShowLyric,
   showArtist, setShowArtist
 }) {
@@ -28,7 +28,7 @@ function Routes({
           <Route
             path='/lyrics'
             component={() => <Lyrics
-              artists={artists} setArtists={setArtists} singleSong={singleSong} setSingleSong={setSingleSong}
+              artist={artist} setArtists={setArtists} song={song} setSong={setSong}
               showLyric={showLyric} setShowLyric={setShowLyric}
               showArtist={showArtist} setShowArtist={setShowArtist}
             />}
@@ -49,10 +49,10 @@ function Routes({
 Routes.propTypes = {
   allJokes: PropTypes.array,
   setAllJokes: PropTypes.func,
-  artists: PropTypes.array,
+  artist: PropTypes.array,
   setArtists: PropTypes.func,
-  singleSong: PropTypes.array,
-  setSingleSong: PropTypes.func,
+  song: PropTypes.array,
+  setSong: PropTypes.func,
   showLyric: PropTypes.array,
   setShowLyric: PropTypes.func,
   showArtist: PropTypes.array,
